@@ -21,9 +21,7 @@ import os
 
 import dagshub
 
-import dagshub
-mlflow.set_tracking_uri('https://dagshub.com/Pranay5519/mlops-mini-project.mlflow')
-dagshub.init(repo_owner='Pranay5519', repo_name='mlops-mini-project', mlflow=True)
+
 
 
 # Load the data
