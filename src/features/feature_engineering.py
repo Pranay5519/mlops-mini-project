@@ -6,6 +6,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 import yaml
 import logging
 import pickle
+import mlflow
+
+
+
 
 # logging configuration
 logger = logging.getLogger('feature_engineering')
@@ -98,6 +102,7 @@ def main():
     try:
         params = load_params('params.yaml')
         max_features = params['feature_engineering']['max_features']
+        
 
         train_data = load_data('./data/interim/train_processed.csv')
         test_data = load_data('./data/interim/test_processed.csv')

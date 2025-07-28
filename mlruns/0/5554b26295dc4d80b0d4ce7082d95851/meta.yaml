@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/0/5554b26295dc4d80b0d4ce7082d95851/artifacts
+end_time: 1753709210355
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5554b26295dc4d80b0d4ce7082d95851
+run_name: exultant-ape-264
+run_uuid: 5554b26295dc4d80b0d4ce7082d95851
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753709208759
+status: 3
+tags: []
+user_id: prana

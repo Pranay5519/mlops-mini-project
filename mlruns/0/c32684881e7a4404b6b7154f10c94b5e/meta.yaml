@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/0/c32684881e7a4404b6b7154f10c94b5e/artifacts
+end_time: 1753712888611
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c32684881e7a4404b6b7154f10c94b5e
+run_name: caring-mule-884
+run_uuid: c32684881e7a4404b6b7154f10c94b5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753712887625
+status: 3
+tags: []
+user_id: prana

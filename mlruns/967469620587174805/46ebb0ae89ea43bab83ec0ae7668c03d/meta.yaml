@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/967469620587174805/46ebb0ae89ea43bab83ec0ae7668c03d/artifacts
+end_time: 1753712997614
+entry_point_name: ''
+experiment_id: '967469620587174805'
+lifecycle_stage: active
+run_id: 46ebb0ae89ea43bab83ec0ae7668c03d
+run_name: aged-hare-835
+run_uuid: 46ebb0ae89ea43bab83ec0ae7668c03d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753712990158
+status: 3
+tags: []
+user_id: prana

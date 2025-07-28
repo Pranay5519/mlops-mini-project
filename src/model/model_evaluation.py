@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import json
+import yaml
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 import logging
 import mlflow
@@ -11,7 +12,6 @@ import mlflow.sklearn
 import dagshub
 import os
 from dotenv import load_dotenv
-
 load_dotenv()
 # Set up DagsHub credentials for MLflow tracking
 dagshub_token = os.getenv("DAGSHUB_PAT")
@@ -44,6 +44,24 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
+
+def load_params(params_path: str) -> dict:
+    """Load parameters from a YAML file."""
+    try:
+        with open(params_path, 'r') as file:
+            params = yaml.safe_load(file)
+        logger.debug('Parameters retrieved from %s', params_path)
+        return params
+    except FileNotFoundError:
+        logger.error('File not found: %s', params_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('YAML error: %s', e)
+        raise
+    except Exception as e:
+        logger.error('Unexpected error: %s', e)
+        raise
+
 
 def load_model(file_path: str):
     """Load the trained model from a file."""
@@ -117,7 +135,7 @@ def save_model_info(run_id: str, model_path: str, file_path: str) -> None:
         raise
 
 def main():
-    mlflow.set_experiment("dvc-pipeline")
+    mlflow.set_experiment("dvc-pipeline2")
     with mlflow.start_run() as run:  # Start an MLflow run
         try:
             clf = load_model('./models/model.pkl')
@@ -127,7 +145,10 @@ def main():
             y_test = test_data.iloc[:, -1].values
 
             metrics = evaluate_model(clf, X_test, y_test)
-            
+            #log max_Fetures 
+            params = load_params('params.yaml')
+            max_features = params['feature_engineering']['max_features']
+            mlflow.log_param("max_features", max_features)  # Log parameter
             save_metrics(metrics, 'reports/metrics.json')
             
             # Log metrics to MLflow
@@ -141,7 +162,7 @@ def main():
                     mlflow.log_param(param_name, param_value)
             
             # Log model to MLflow
-         #   mlflow.sklearn.log_model(clf, "model")
+            mlflow.sklearn.log_model(clf, "model")
             
             # Save model info
             save_model_info(run.info.run_id, "model", 'reports/experiment_info.json')

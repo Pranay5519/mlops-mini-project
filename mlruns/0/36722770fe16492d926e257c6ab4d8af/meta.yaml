@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/0/36722770fe16492d926e257c6ab4d8af/artifacts
+end_time: 1753709906160
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36722770fe16492d926e257c6ab4d8af
+run_name: respected-quail-868
+run_uuid: 36722770fe16492d926e257c6ab4d8af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753709821949
+status: 4
+tags: []
+user_id: prana

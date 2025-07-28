@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/967469620587174805/e1a1c82c7ef447a58b9eeb6d15992ceb/artifacts
+end_time: 1753712896304
+entry_point_name: ''
+experiment_id: '967469620587174805'
+lifecycle_stage: active
+run_id: e1a1c82c7ef447a58b9eeb6d15992ceb
+run_name: defiant-sponge-256
+run_uuid: e1a1c82c7ef447a58b9eeb6d15992ceb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753712891060
+status: 3
+tags: []
+user_id: prana
