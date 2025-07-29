@@ -97,8 +97,8 @@ def get_latest_model_version(model_name):
         latest_version = client.get_latest_versions(model_name, stages=["None"])
     return latest_version[0].version if latest_version else None
 
-model_name = "LoR Model"
-model_version = 6
+model_name = "LinearRegressionModel-for-CI"
+model_version = 1
 
 model_uri = f'models:/{model_name}/{model_version}'
 model = mlflow.pyfunc.load_model(model_uri)

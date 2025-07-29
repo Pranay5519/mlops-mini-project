@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/prana/Desktop/VS_CODE/MLOps/mlops-mini-project/mlruns/0/4c1977a153444b96bc5fd55b48dedd8a/artifacts
+end_time: 1753792173790
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4c1977a153444b96bc5fd55b48dedd8a
+run_name: masked-bass-611
+run_uuid: 4c1977a153444b96bc5fd55b48dedd8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753792171348
+status: 3
+tags: []
+user_id: prana
